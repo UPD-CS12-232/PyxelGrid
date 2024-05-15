@@ -158,7 +158,7 @@ class PyxelGrid(Generic[T]):
         """
         pyx.init(self.width, self.height, **options)
         self.init()
-        pyx.run(self.update, self.draw)
+        pyx.run(self.update, self._draw)
 
     def in_bounds(self, i: int, j: int) -> bool:
         """Returns whether cell `(i, j)` is inside the grid or not."""
@@ -249,7 +249,7 @@ class PyxelGrid(Generic[T]):
         for i, j in product(range(self.r), range(self.c)):
             self.draw_cell_layer(i, j, self.x(j), self.y(i), layeri)
 
-    def draw(self) -> None:
+    def _draw(self) -> None:
         """Draws the whole grid for a given frame.
 
         This is intended to be passed to `pyxel.run`.

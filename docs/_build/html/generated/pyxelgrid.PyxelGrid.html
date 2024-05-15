@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pyxelgrid.PyxelGrid &mdash; pyxelgrid  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            pyxelgrid
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../source/pyxelgrid.html">pyxelgrid module</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyxelgrid</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">pyxelgrid.PyxelGrid</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/pyxelgrid.PyxelGrid.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pyxelgrid-pyxelgrid">
+<h1>pyxelgrid.PyxelGrid<a class="headerlink" href="#pyxelgrid-pyxelgrid" title="Link to this heading"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyxelgrid.</span></span><span class="sig-name descname"><span class="pre">PyxelGrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_l</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_r</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_u</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_d</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layerc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyxelgrid.html#PyxelGrid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyxelgrid.PyxelGrid" title="Link to this definition"></a></dt>
+<dd><dl class="py method">
+<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_l</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_r</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_u</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_d</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layerc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyxelgrid.html#PyxelGrid.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyxelgrid.PyxelGrid.__init__" title="Link to this definition"></a></dt>
+<dd><p>Create a PyxelGrid instance which represents a Pyxel game that’s inherently
+“grid-based”.</p>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#pyxelgrid.PyxelGrid.__init__" title="pyxelgrid.PyxelGrid.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(r, c, *[, dim, x_l, x_r, y_u, y_d, ...])</p></td>
+<td><p>Create a PyxelGrid instance which represents a Pyxel game that's inherently &quot;grid-based&quot;.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.check_in_bounds" title="pyxelgrid.PyxelGrid.check_in_bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">check_in_bounds</span></code></a>(i, j)</p></td>
+<td><p>Raises an IndexError if cell <cite>(i, j)</cite> is outside the grid.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.draw" title="pyxelgrid.PyxelGrid.draw"><code class="xref py py-obj docutils literal notranslate"><span class="pre">draw</span></code></a>()</p></td>
+<td><p>Draws the whole grid for a given frame.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.draw_cell" title="pyxelgrid.PyxelGrid.draw_cell"><code class="xref py py-obj docutils literal notranslate"><span class="pre">draw_cell</span></code></a>(i, j, x, y)</p></td>
+<td><p>Draws cell <cite>(i, j)</cite> in the main grid.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.draw_cell_layer" title="pyxelgrid.PyxelGrid.draw_cell_layer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">draw_cell_layer</span></code></a>(i, j, x, y, layeri)</p></td>
+<td><p>Draws cell <cite>(i, j)</cite> in layer <cite>layeri</cite>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.in_bounds" title="pyxelgrid.PyxelGrid.in_bounds"><code class="xref py py-obj docutils literal notranslate"><span class="pre">in_bounds</span></code></a>(i, j)</p></td>
+<td><p>Returns whether cell <cite>(i, j)</cite> is inside the grid or not.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.init" title="pyxelgrid.PyxelGrid.init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init</span></code></a>()</p></td>
+<td><p>Initializes the game, before running it.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.mouse_cell" title="pyxelgrid.PyxelGrid.mouse_cell"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mouse_cell</span></code></a>()</p></td>
+<td><p>Returns the coordinates of the cell 'containing' the mouse cursor.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.pop" title="pyxelgrid.PyxelGrid.pop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pop</span></code></a>(ij)</p></td>
+<td><p>Pops the &quot;state&quot; of cell <cite>(i, j)</cite>, returning it into an uninitialized state.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.post_draw_grid" title="pyxelgrid.PyxelGrid.post_draw_grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">post_draw_grid</span></code></a>()</p></td>
+<td><p>Performs draw commands after drawing the main grid.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.post_draw_layer" title="pyxelgrid.PyxelGrid.post_draw_layer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">post_draw_layer</span></code></a>(layeri)</p></td>
+<td><p>Performs draw commands after drawing the main grid for layer <cite>layeri</cite>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.pre_draw_grid" title="pyxelgrid.PyxelGrid.pre_draw_grid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pre_draw_grid</span></code></a>()</p></td>
+<td><p>Performs draw commands before drawing the main grid.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.pre_draw_layer" title="pyxelgrid.PyxelGrid.pre_draw_layer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pre_draw_layer</span></code></a>(layeri)</p></td>
+<td><p>Performs draw commands before drawing the main grid for layer <cite>layeri</cite>.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.run" title="pyxelgrid.PyxelGrid.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a>(**options)</p></td>
+<td><p>Initialize and run the game.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.update" title="pyxelgrid.PyxelGrid.update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update</span></code></a>()</p></td>
+<td><p>Updates the game state by one frame.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.x" title="pyxelgrid.PyxelGrid.x"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x</span></code></a>(j)</p></td>
+<td><p>Converts the column index <cite>j</cite> into a x-coordinate value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.y" title="pyxelgrid.PyxelGrid.y"><code class="xref py py-obj docutils literal notranslate"><span class="pre">y</span></code></a>(i)</p></td>
+<td><p>Converts the row index <cite>i</cite> into a y-coordinate value.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.c" title="pyxelgrid.PyxelGrid.c"><code class="xref py py-obj docutils literal notranslate"><span class="pre">c</span></code></a></p></td>
+<td><p>The number of columns.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.dim" title="pyxelgrid.PyxelGrid.dim"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dim</span></code></a></p></td>
+<td><p>The side length of a grid cell, in pixels.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.height" title="pyxelgrid.PyxelGrid.height"><code class="xref py py-obj docutils literal notranslate"><span class="pre">height</span></code></a></p></td>
+<td><p>Returns the intended height of the grid, in pyxels.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.layerc" title="pyxelgrid.PyxelGrid.layerc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">layerc</span></code></a></p></td>
+<td><p>The number of layers.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.r" title="pyxelgrid.PyxelGrid.r"><code class="xref py py-obj docutils literal notranslate"><span class="pre">r</span></code></a></p></td>
+<td><p>The number of rows.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.width" title="pyxelgrid.PyxelGrid.width"><code class="xref py py-obj docutils literal notranslate"><span class="pre">width</span></code></a></p></td>
+<td><p>Returns the intended width of the grid, in pyxels.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.x_l" title="pyxelgrid.PyxelGrid.x_l"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x_l</span></code></a></p></td>
+<td><p>The padding to the left, in pixels.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.x_r" title="pyxelgrid.PyxelGrid.x_r"><code class="xref py py-obj docutils literal notranslate"><span class="pre">x_r</span></code></a></p></td>
+<td><p>The padding to the right, in pixels.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.y_d" title="pyxelgrid.PyxelGrid.y_d"><code class="xref py py-obj docutils literal notranslate"><span class="pre">y_d</span></code></a></p></td>
+<td><p>The padding below, in pixels.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.y_u" title="pyxelgrid.PyxelGrid.y_u"><code class="xref py py-obj docutils literal notranslate"><span class="pre">y_u</span></code></a></p></td>
+<td><p>The padding above, in pixels.</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, cs12232.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

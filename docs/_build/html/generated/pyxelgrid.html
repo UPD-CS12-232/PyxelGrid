@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pyxelgrid &mdash; pyxelgrid  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            pyxelgrid
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../source/pyxelgrid.html">pyxelgrid module</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyxelgrid</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">pyxelgrid</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/generated/pyxelgrid.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-pyxelgrid">
+<span id="pyxelgrid"></span><h1>pyxelgrid<a class="headerlink" href="#module-pyxelgrid" title="Link to this heading"></a></h1>
+<p>A grid-based pyxel game class.</p>
+<p>The standard usage involves subclassing <cite>PyxelGrid</cite> with a concrete class and overriding some of the
+functions, e.g.,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyGame</span><span class="p">(</span><span class="n">PyxelGrid</span><span class="p">[</span><span class="nb">int</span><span class="p">]):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">r</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>  <span class="c1"># 5 rows, 7 columns, cell side length 10 pixels</span>
+
+    <span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># called once at initialization time</span>
+        <span class="o">...</span>
+
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># called every frame</span>
+        <span class="o">...</span>
+
+    <span class="k">def</span> <span class="nf">draw_cell</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">j</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># draws cell (i, j)</span>
+        <span class="o">...</span>
+
+    <span class="k">def</span> <span class="nf">pre_draw_grid</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># performs graphics drawing before the main grid is drawn</span>
+        <span class="c1"># drawing the background image (e.g. via pyxel.cls) can be done here</span>
+        <span class="o">...</span>
+
+
+    <span class="k">def</span> <span class="nf">post_draw_grid</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># performs graphics drawing after the main grid is drawn</span>
+        <span class="o">...</span>
+</pre></div>
+</div>
+<p>Note that no method is required to be overridden.</p>
+<p>To run the game, call the <cite>run()</cite> method, e.g.,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_game</span> <span class="o">=</span> <span class="n">MyGame</span><span class="p">()</span>
+
+<span class="c1"># The keyword arguments are passed directly to pyxel.init</span>
+<span class="n">my_game</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;My Game&quot;</span><span class="p">,</span> <span class="n">fps</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <cite>run()</cite> method automatically initializes <cite>pyxel</cite> for you, so you don’t have to call <cite>pyxel.init</cite>
+or <cite>pyxel.run</cite>.</p>
+<p>The grid has <cite>r</cite> rows and <cite>c</cite> columns, and each cell of the grid is a square with a side
+length of <cite>dim</cite> pixels. You can specify a “padding” on all four sides: <cite>x_l</cite> pixels to the
+left, <cite>x_r</cite> pixels to the right, <cite>y_u</cite> pixels above, and <cite>y_d</cite> pixels below. (Every padding
+defaults to 0.)</p>
+<p>Individual cells are addressed by two coordinates <cite>i</cite> and <cite>j</cite>, representing the row and
+column numbers, respectively. Row numbers start from the top, and column numbers start from
+the right. These are both zero-indexed, so the top-left and bottom-right cells have
+coordinates <cite>(0, 0)</cite> and <cite>(r-1, c-1)</cite>, respectively.</p>
+<p>Each cell can hold a value or state, of (generic) type <cite>T</cite>. For example, <cite>PyxelGrid[int]</cite>
+represents a grid of <a href="#id1"><span class="problematic" id="id2">`</span></a>int`s. Note that the cell’s state must first be initialized before
+using.</p>
+<p>On drawing time, the <cite>pre_draw_grid()</cite> method is first called, then all cells are drawn individually
+in row-major order, then finally the <cite>post_draw_grid()</cite> method is called.</p>
+<p>By default, the grid is drawn as a single “layer”. You can specify additional layers on top
+of it by passing in <cite>layerc</cite> (which defaults to 0). Every layer is drawn one after the
+other. The layers are drawn in increasing order (indexed <cite>0</cite> to <cite>layerc - 1</cite>) after the main grid.
+Each layer is drawn in a similar way as the main grid; <cite>pre_draw_layer()</cite> is called, then the cells
+are drawn in row-major order (via <cite>draw_cell_layer()), then finally, `post_draw_layer()</cite> is called.</p>
+<p class="rubric">Classes</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid" title="pyxelgrid.PyxelGrid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PyxelGrid</span></code></a>(r, c, *[, dim, x_l, x_r, y_u, ...])</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, cs12232.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

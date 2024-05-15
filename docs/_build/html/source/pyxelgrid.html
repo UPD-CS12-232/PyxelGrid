@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>pyxelgrid module &mdash; pyxelgrid  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="../_static/doctools.js?v=9a2dae69"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Welcome to PyxelGrid’s documentation!" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            pyxelgrid
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">pyxelgrid module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#pyxelgrid.PyxelGrid"><code class="docutils literal notranslate"><span class="pre">PyxelGrid</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.check_in_bounds"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.check_in_bounds()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.draw"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.draw()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.draw_cell"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.draw_cell()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.draw_cell_layer"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.draw_cell_layer()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.in_bounds"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.in_bounds()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.init"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.init()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.mouse_cell"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.mouse_cell()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.pop"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.pop()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.post_draw_grid"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.post_draw_grid()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.post_draw_layer"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.post_draw_layer()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.pre_draw_grid"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.pre_draw_grid()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.pre_draw_layer"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.pre_draw_layer()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.run"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.run()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.update"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.update()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.x"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.x()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.y"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.y()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.c"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.c</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.dim"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.dim</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.height"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.height</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.layerc"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.layerc</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.r"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.r</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.width"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.width</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.x_l"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.x_l</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.x_r"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.x_r</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.y_d"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.y_d</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.y_u"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.y_u</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">pyxelgrid</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">pyxelgrid module</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/source/pyxelgrid.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-pyxelgrid">
+<span id="pyxelgrid-module"></span><h1>pyxelgrid module<a class="headerlink" href="#module-pyxelgrid" title="Link to this heading"></a></h1>
+<p>A grid-based pyxel game class.</p>
+<p>The standard usage involves subclassing <cite>PyxelGrid</cite> with a concrete class and overriding some of the
+functions, e.g.,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyGame</span><span class="p">(</span><span class="n">PyxelGrid</span><span class="p">[</span><span class="nb">int</span><span class="p">]):</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">r</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>  <span class="c1"># 5 rows, 7 columns, cell side length 10 pixels</span>
+
+    <span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># called once at initialization time</span>
+        <span class="o">...</span>
+
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># called every frame</span>
+        <span class="o">...</span>
+
+    <span class="k">def</span> <span class="nf">draw_cell</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">j</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># draws cell (i, j)</span>
+        <span class="o">...</span>
+
+    <span class="k">def</span> <span class="nf">pre_draw_grid</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># performs graphics drawing before the main grid is drawn</span>
+        <span class="c1"># drawing the background image (e.g. via pyxel.cls) can be done here</span>
+        <span class="o">...</span>
+
+
+    <span class="k">def</span> <span class="nf">post_draw_grid</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># performs graphics drawing after the main grid is drawn</span>
+        <span class="o">...</span>
+</pre></div>
+</div>
+<p>Note that no method is required to be overridden.</p>
+<p>To run the game, call the <cite>run()</cite> method, e.g.,</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_game</span> <span class="o">=</span> <span class="n">MyGame</span><span class="p">()</span>
+
+<span class="c1"># The keyword arguments are passed directly to pyxel.init</span>
+<span class="n">my_game</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;My Game&quot;</span><span class="p">,</span> <span class="n">fps</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <cite>run()</cite> method automatically initializes <cite>pyxel</cite> for you, so you don’t have to call <cite>pyxel.init</cite>
+or <cite>pyxel.run</cite>.</p>
+<p>The grid has <cite>r</cite> rows and <cite>c</cite> columns, and each cell of the grid is a square with a side
+length of <cite>dim</cite> pixels. You can specify a “padding” on all four sides: <cite>x_l</cite> pixels to the
+left, <cite>x_r</cite> pixels to the right, <cite>y_u</cite> pixels above, and <cite>y_d</cite> pixels below. (Every padding
+defaults to 0.)</p>
+<p>Individual cells are addressed by two coordinates <cite>i</cite> and <cite>j</cite>, representing the row and
+column numbers, respectively. Row numbers start from the top, and column numbers start from
+the right. These are both zero-indexed, so the top-left and bottom-right cells have
+coordinates <cite>(0, 0)</cite> and <cite>(r-1, c-1)</cite>, respectively.</p>
+<p>Each cell can hold a value or state, of (generic) type <cite>T</cite>. For example, <cite>PyxelGrid[int]</cite>
+represents a grid of <a href="#id1"><span class="problematic" id="id2">`</span></a>int`s. Note that the cell’s state must first be initialized before
+using.</p>
+<p>On drawing time, the <cite>pre_draw_grid()</cite> method is first called, then all cells are drawn individually
+in row-major order, then finally the <cite>post_draw_grid()</cite> method is called.</p>
+<p>By default, the grid is drawn as a single “layer”. You can specify additional layers on top
+of it by passing in <cite>layerc</cite> (which defaults to 0). Every layer is drawn one after the
+other. The layers are drawn in increasing order (indexed <cite>0</cite> to <cite>layerc - 1</cite>) after the main grid.
+Each layer is drawn in a similar way as the main grid; <cite>pre_draw_layer()</cite> is called, then the cells
+are drawn in row-major order (via <cite>draw_cell_layer()), then finally, `post_draw_layer()</cite> is called.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyxelgrid.</span></span><span class="sig-name descname"><span class="pre">PyxelGrid</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dim</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_l</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_r</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_u</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y_d</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layerc</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pyxelgrid.html#PyxelGrid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyxelgrid.PyxelGrid" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Generic</span></code>[<code class="xref py py-obj docutils literal notranslate"><span class="pre">T</span></code>]</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid.check_in_bounds">
+<span class="sig-name descname"><span class="pre">check_in_bounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/pyxelgrid.html#PyxelGrid.check_in_bounds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyxelgrid.PyxelGrid.check_in_bounds" title="Link to this definition"></a></dt>
+<dd><p>Raises an IndexError if cell <cite>(i, j)</cite> is outside the grid.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid.draw">
+<span class="sig-name descname"><span class="pre">draw</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/pyxelgrid.html#PyxelGrid.draw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyxelgrid.PyxelGrid.draw" title="Link to this definition"></a></dt>
+<dd><p>Draws the whole grid for a given frame.</p>
+<p>This is intended to be passed to <cite>pyxel.run</cite>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid.draw_cell">
+<span class="sig-name descname"><span class="pre">draw_cell</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/pyxelgrid.html#PyxelGrid.draw_cell"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyxelgrid.PyxelGrid.draw_cell" title="Link to this definition"></a></dt>
+<dd><p>Draws cell <cite>(i, j)</cite> in the main grid.</p>
+<p>Its topleft corner pixel has coordinates (x, y).</p>
+<p>This is intended to be overridden.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid.draw_cell_layer">
+<span class="sig-name descname"><span class="pre">draw_cell_layer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layeri</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/pyxelgrid.html#PyxelGrid.draw_cell_layer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyxelgrid.PyxelGrid.draw_cell_layer" title="Link to this definition"></a></dt>
+<dd><p>Draws cell <cite>(i, j)</cite> in layer <cite>layeri</cite>.</p>
+<p>This is intended to be overridden.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid.in_bounds">
+<span class="sig-name descname"><span class="pre">in_bounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="reference internal" href="../_modules/pyxelgrid.html#PyxelGrid.in_bounds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyxelgrid.PyxelGrid.in_bounds" title="Link to this definition"></a></dt>
+<dd><p>Returns whether cell <cite>(i, j)</cite> is inside the grid or not.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid.init">
+<span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/pyxelgrid.html#PyxelGrid.init"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyxelgrid.PyxelGrid.init" title="Link to this definition"></a></dt>
+<dd><p>Initializes the game, before running it.</p>
+<p>This is automatically called by the <cite>run()</cite> method, after calling <cite>pyxel.init</cite> but before
+calling <cite>pyxel.run</cite>.</p>
+<p>This is intended to be overridden.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid.mouse_cell">
+<span class="sig-name descname"><span class="pre">mouse_cell</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/pyxelgrid.html#PyxelGrid.mouse_cell"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyxelgrid.PyxelGrid.mouse_cell" title="Link to this definition"></a></dt>
+<dd><p>Returns the coordinates of the cell ‘containing’ the mouse cursor.</p>
+<p>Note that the coordinates returned may be “outside” the grid; use the <cite>in_bounds()</cite> method
+to check whether the cell is inside the grid or not.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid.pop">
+<span class="sig-name descname"><span class="pre">pop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ij</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">tuple</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">T</span></span></span><a class="reference internal" href="../_modules/pyxelgrid.html#PyxelGrid.pop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyxelgrid.PyxelGrid.pop" title="Link to this definition"></a></dt>
+<dd><p>Pops the “state” of cell <cite>(i, j)</cite>, returning it into an uninitialized state.</p>
+<p>This raises an <cite>IndexError</cite> if <cite>(i, j)</cite> is outside the grid or if its state hasn’t been
+initialized yet.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid.post_draw_grid">
+<span class="sig-name descname"><span class="pre">post_draw_grid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/pyxelgrid.html#PyxelGrid.post_draw_grid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyxelgrid.PyxelGrid.post_draw_grid" title="Link to this definition"></a></dt>
+<dd><p>Performs draw commands after drawing the main grid.</p>
+<p>This is intended to be overridden.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid.post_draw_layer">
+<span class="sig-name descname"><span class="pre">post_draw_layer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layeri</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/pyxelgrid.html#PyxelGrid.post_draw_layer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyxelgrid.PyxelGrid.post_draw_layer" title="Link to this definition"></a></dt>
+<dd><p>Performs draw commands after drawing the main grid for layer <cite>layeri</cite>.</p>
+<p>This is intended to be overridden.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid.pre_draw_grid">
+<span class="sig-name descname"><span class="pre">pre_draw_grid</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/pyxelgrid.html#PyxelGrid.pre_draw_grid"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyxelgrid.PyxelGrid.pre_draw_grid" title="Link to this definition"></a></dt>
+<dd><p>Performs draw commands before drawing the main grid.</p>
+<p>This is intended to be overridden.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid.pre_draw_layer">
+<span class="sig-name descname"><span class="pre">pre_draw_layer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">layeri</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/pyxelgrid.html#PyxelGrid.pre_draw_layer"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyxelgrid.PyxelGrid.pre_draw_layer" title="Link to this definition"></a></dt>
+<dd><p>Performs draw commands before drawing the main grid for layer <cite>layeri</cite>.</p>
+<p>This is intended to be overridden.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Any</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/pyxelgrid.html#PyxelGrid.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyxelgrid.PyxelGrid.run" title="Link to this definition"></a></dt>
+<dd><p>Initialize and run the game.</p>
+<p>This calls pyxel’s <cite>init</cite> function and then <cite>run</cite> after that. Between those two calls,
+the <cite>init()</cite> method of the class is called. You should do your initialization in this
+method.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/pyxelgrid.html#PyxelGrid.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyxelgrid.PyxelGrid.update" title="Link to this definition"></a></dt>
+<dd><p>Updates the game state by one frame.</p>
+<p>This is intended to be passed to <cite>pyxel.run</cite>.</p>
+<p>This is intended to be overridden.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid.x">
+<span class="sig-name descname"><span class="pre">x</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="../_modules/pyxelgrid.html#PyxelGrid.x"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyxelgrid.PyxelGrid.x" title="Link to this definition"></a></dt>
+<dd><p>Converts the column index <cite>j</cite> into a x-coordinate value.</p>
+<p>Note that <cite>j = 0</cite> refers to the leftmost boundary of the grid, while <cite>j = c</cite> refers to the
+rightmost boundary of the grid. This method takes into account the padding values; <cite>y(0)</cite>
+doesn’t return the value <cite>0</cite> if the left padding is nonzero.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid.y">
+<span class="sig-name descname"><span class="pre">y</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="reference internal" href="../_modules/pyxelgrid.html#PyxelGrid.y"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyxelgrid.PyxelGrid.y" title="Link to this definition"></a></dt>
+<dd><p>Converts the row index <cite>i</cite> into a y-coordinate value.</p>
+<p>Note that <cite>i = 0</cite> refers to the topmost boundary of the grid, while <cite>i = r</cite> refers to the
+bottommost boundary of the grid. This method takes into account the padding values; <cite>y(0)</cite>
+doesn’t return the value <cite>0</cite> if the top padding is nonzero.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid.c">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">c</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyxelgrid.PyxelGrid.c" title="Link to this definition"></a></dt>
+<dd><p>The number of columns.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid.dim">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">dim</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyxelgrid.PyxelGrid.dim" title="Link to this definition"></a></dt>
+<dd><p>The side length of a grid cell, in pixels.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid.height">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">height</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyxelgrid.PyxelGrid.height" title="Link to this definition"></a></dt>
+<dd><p>Returns the intended height of the grid, in pyxels.</p>
+<p>This incorporates the padding values.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid.layerc">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">layerc</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyxelgrid.PyxelGrid.layerc" title="Link to this definition"></a></dt>
+<dd><p>The number of layers.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid.r">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">r</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyxelgrid.PyxelGrid.r" title="Link to this definition"></a></dt>
+<dd><p>The number of rows.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid.width">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">width</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyxelgrid.PyxelGrid.width" title="Link to this definition"></a></dt>
+<dd><p>Returns the intended width of the grid, in pyxels.</p>
+<p>This incorporates the padding values.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid.x_l">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">x_l</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyxelgrid.PyxelGrid.x_l" title="Link to this definition"></a></dt>
+<dd><p>The padding to the left, in pixels.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid.x_r">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">x_r</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyxelgrid.PyxelGrid.x_r" title="Link to this definition"></a></dt>
+<dd><p>The padding to the right, in pixels.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid.y_d">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">y_d</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyxelgrid.PyxelGrid.y_d" title="Link to this definition"></a></dt>
+<dd><p>The padding below, in pixels.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid.y_u">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">y_u</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#pyxelgrid.PyxelGrid.y_u" title="Link to this definition"></a></dt>
+<dd><p>The padding above, in pixels.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to PyxelGrid’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, cs12232.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
