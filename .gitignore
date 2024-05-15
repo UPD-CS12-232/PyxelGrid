@@ -1,0 +1,4 @@
+pyxel_examples/
+basura*
+__pycache__
+*.pyc
