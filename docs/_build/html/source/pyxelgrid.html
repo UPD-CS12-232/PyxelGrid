@@ -48,7 +48,6 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">pyxelgrid module</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#pyxelgrid.PyxelGrid"><code class="docutils literal notranslate"><span class="pre">PyxelGrid</span></code></a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.check_in_bounds"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.check_in_bounds()</span></code></a></li>
-<li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.draw"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.draw()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.draw_cell"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.draw_cell()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.draw_cell_layer"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.draw_cell_layer()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#pyxelgrid.PyxelGrid.in_bounds"><code class="docutils literal notranslate"><span class="pre">PyxelGrid.in_bounds()</span></code></a></li>
@@ -172,13 +171,6 @@ are drawn in row-major order (via <cite>draw_cell_layer()), then finally, `post_
 <dt class="sig sig-object py" id="pyxelgrid.PyxelGrid.check_in_bounds">
 <span class="sig-name descname"><span class="pre">check_in_bounds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">j</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/pyxelgrid.html#PyxelGrid.check_in_bounds"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyxelgrid.PyxelGrid.check_in_bounds" title="Link to this definition"></a></dt>
 <dd><p>Raises an IndexError if cell <cite>(i, j)</cite> is outside the grid.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="pyxelgrid.PyxelGrid.draw">
-<span class="sig-name descname"><span class="pre">draw</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="reference internal" href="../_modules/pyxelgrid.html#PyxelGrid.draw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyxelgrid.PyxelGrid.draw" title="Link to this definition"></a></dt>
-<dd><p>Draws the whole grid for a given frame.</p>
-<p>This is intended to be passed to <cite>pyxel.run</cite>.</p>
 </dd></dl>
 
 <dl class="py method">

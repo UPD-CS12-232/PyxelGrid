@@ -41,8 +41,9 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
-<li class="toctree-l1"><a class="reference internal" href="../generated/pyxelgrid.PyxelGrid.html">pyxelgrid.PyxelGrid</a></li>
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../source/pyxelgrid.html">pyxelgrid module</a></li>
 </ul>
 
         </div>
@@ -156,7 +157,7 @@
 <span class="n">T</span> <span class="o">=</span> <span class="n">TypeVar</span><span class="p">(</span><span class="s1">&#39;T&#39;</span><span class="p">)</span>
 
 <div class="viewcode-block" id="PyxelGrid">
-<a class="viewcode-back" href="../generated/pyxelgrid.PyxelGrid.html#pyxelgrid.PyxelGrid">[docs]</a>
+<a class="viewcode-back" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid">[docs]</a>
 <span class="k">class</span> <span class="nc">PyxelGrid</span><span class="p">(</span><span class="n">Generic</span><span class="p">[</span><span class="n">T</span><span class="p">]):</span>
 <div class="viewcode-block" id="PyxelGrid.__init__">
 <a class="viewcode-back" href="../generated/pyxelgrid.PyxelGrid.html#pyxelgrid.PyxelGrid.__init__">[docs]</a>
@@ -226,6 +227,8 @@
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;The number of layers.&quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_layerc</span>
 
+<div class="viewcode-block" id="PyxelGrid.run">
+<a class="viewcode-back" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.run">[docs]</a>
     <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Initialize and run the game.</span>
 
@@ -235,24 +238,34 @@
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">pyx</span><span class="o">.</span><span class="n">init</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">width</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">height</span><span class="p">,</span> <span class="o">**</span><span class="n">options</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
-        <span class="n">pyx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">draw</span><span class="p">)</span>
+        <span class="n">pyx</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">update</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_draw</span><span class="p">)</span></div>
 
+
+<div class="viewcode-block" id="PyxelGrid.in_bounds">
+<a class="viewcode-back" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.in_bounds">[docs]</a>
     <span class="k">def</span> <span class="nf">in_bounds</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">j</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns whether cell `(i, j)` is inside the grid or not.&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">r</span> <span class="ow">and</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">c</span>
+        <span class="k">return</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">r</span> <span class="ow">and</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">c</span></div>
 
+
+<div class="viewcode-block" id="PyxelGrid.mouse_cell">
+<a class="viewcode-back" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.mouse_cell">[docs]</a>
     <span class="k">def</span> <span class="nf">mouse_cell</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the coordinates of the cell &#39;containing&#39; the mouse cursor.</span>
 
 <span class="sd">        Note that the coordinates returned may be &quot;outside&quot; the grid; use the `in_bounds()` method</span>
 <span class="sd">        to check whether the cell is inside the grid or not.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="p">(</span><span class="n">pyx</span><span class="o">.</span><span class="n">mouse_y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">y_u</span><span class="p">)</span> <span class="o">//</span> <span class="bp">self</span><span class="o">.</span><span class="n">dim</span><span class="p">,</span> <span class="p">(</span><span class="n">pyx</span><span class="o">.</span><span class="n">mouse_x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">x_l</span><span class="p">)</span> <span class="o">//</span> <span class="bp">self</span><span class="o">.</span><span class="n">dim</span>
+        <span class="k">return</span> <span class="p">(</span><span class="n">pyx</span><span class="o">.</span><span class="n">mouse_y</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">y_u</span><span class="p">)</span> <span class="o">//</span> <span class="bp">self</span><span class="o">.</span><span class="n">dim</span><span class="p">,</span> <span class="p">(</span><span class="n">pyx</span><span class="o">.</span><span class="n">mouse_x</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">x_l</span><span class="p">)</span> <span class="o">//</span> <span class="bp">self</span><span class="o">.</span><span class="n">dim</span></div>
 
+
+<div class="viewcode-block" id="PyxelGrid.check_in_bounds">
+<a class="viewcode-back" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.check_in_bounds">[docs]</a>
     <span class="k">def</span> <span class="nf">check_in_bounds</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">j</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Raises an IndexError if cell `(i, j)` is outside the grid.&quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">in_bounds</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">):</span>
-            <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Index out of bounds: </span><span class="si">{</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Index out of bounds: </span><span class="si">{</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span></div>
+
 
     <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ij</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Returns the &quot;state&quot; of cell `(i, j)`.</span>
@@ -265,6 +278,8 @@
             <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cell </span><span class="si">{</span><span class="n">ij</span><span class="si">}</span><span class="s2"> is not yet initialized&quot;</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cell_state</span><span class="p">[</span><span class="n">ij</span><span class="p">]</span>
 
+<div class="viewcode-block" id="PyxelGrid.pop">
+<a class="viewcode-back" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.pop">[docs]</a>
     <span class="k">def</span> <span class="nf">pop</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ij</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">T</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Pops the &quot;state&quot; of cell `(i, j)`, returning it into an uninitialized state.</span>
 
@@ -274,7 +289,8 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">check_in_bounds</span><span class="p">(</span><span class="o">*</span><span class="n">ij</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">ij</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cell_state</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">IndexError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Cell </span><span class="si">{</span><span class="n">ij</span><span class="si">}</span><span class="s2"> is not yet initialized&quot;</span><span class="p">)</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cell_state</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">ij</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_cell_state</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="n">ij</span><span class="p">)</span></div>
+
 
     <span class="k">def</span> <span class="fm">__setitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ij</span><span class="p">:</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">],</span> <span class="n">state</span><span class="p">:</span> <span class="n">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Sets the &quot;state&quot; of cell `(i, j)` to the given value.</span>
@@ -284,6 +300,8 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">check_in_bounds</span><span class="p">(</span><span class="o">*</span><span class="n">ij</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_cell_state</span><span class="p">[</span><span class="n">ij</span><span class="p">]</span> <span class="o">=</span> <span class="n">state</span>
 
+<div class="viewcode-block" id="PyxelGrid.y">
+<a class="viewcode-back" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.y">[docs]</a>
     <span class="k">def</span> <span class="nf">y</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Converts the row index `i` into a y-coordinate value.</span>
 
@@ -291,8 +309,11 @@
 <span class="sd">        bottommost boundary of the grid. This method takes into account the padding values; `y(0)`</span>
 <span class="sd">        doesn&#39;t return the value `0` if the top padding is nonzero.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="n">i</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">dim</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">y_u</span>
+        <span class="k">return</span> <span class="n">i</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">dim</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">y_u</span></div>
 
+
+<div class="viewcode-block" id="PyxelGrid.x">
+<a class="viewcode-back" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.x">[docs]</a>
     <span class="k">def</span> <span class="nf">x</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">j</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Converts the column index `j` into a x-coordinate value.</span>
 
@@ -300,7 +321,8 @@
 <span class="sd">        rightmost boundary of the grid. This method takes into account the padding values; `y(0)`</span>
 <span class="sd">        doesn&#39;t return the value `0` if the left padding is nonzero.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="n">j</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">dim</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">x_l</span>
+        <span class="k">return</span> <span class="n">j</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">dim</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">x_l</span></div>
+
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">width</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
@@ -326,7 +348,7 @@
         <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">product</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">r</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">c</span><span class="p">)):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">draw_cell_layer</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">x</span><span class="p">(</span><span class="n">j</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="n">layeri</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">draw</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">_draw</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Draws the whole grid for a given frame.</span>
 
 <span class="sd">        This is intended to be passed to `pyxel.run`.</span>
@@ -339,6 +361,8 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">_draw_layer</span><span class="p">(</span><span class="n">layeri</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">post_draw_layer</span><span class="p">(</span><span class="n">layeri</span><span class="p">)</span>
 
+<div class="viewcode-block" id="PyxelGrid.init">
+<a class="viewcode-back" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.init">[docs]</a>
     <span class="k">def</span> <span class="nf">init</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Initializes the game, before running it.</span>
 
@@ -347,8 +371,11 @@
 
 <span class="sd">        This is intended to be overridden.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">pass</span>
+        <span class="k">pass</span></div>
 
+
+<div class="viewcode-block" id="PyxelGrid.update">
+<a class="viewcode-back" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.update">[docs]</a>
     <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Updates the game state by one frame.</span>
 
@@ -356,8 +383,11 @@
 
 <span class="sd">        This is intended to be overridden.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">pass</span>
+        <span class="k">pass</span></div>
 
+
+<div class="viewcode-block" id="PyxelGrid.draw_cell">
+<a class="viewcode-back" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.draw_cell">[docs]</a>
     <span class="k">def</span> <span class="nf">draw_cell</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">j</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Draws cell `(i, j)` in the main grid.</span>
 
@@ -365,42 +395,58 @@
 
 <span class="sd">        This is intended to be overridden.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">pass</span>
+        <span class="k">pass</span></div>
 
+
+<div class="viewcode-block" id="PyxelGrid.draw_cell_layer">
+<a class="viewcode-back" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.draw_cell_layer">[docs]</a>
     <span class="k">def</span> <span class="nf">draw_cell_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">j</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">layeri</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Draws cell `(i, j)` in layer `layeri`.</span>
 
 <span class="sd">        This is intended to be overridden.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">pass</span>
+        <span class="k">pass</span></div>
 
+
+<div class="viewcode-block" id="PyxelGrid.pre_draw_grid">
+<a class="viewcode-back" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.pre_draw_grid">[docs]</a>
     <span class="k">def</span> <span class="nf">pre_draw_grid</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Performs draw commands before drawing the main grid.</span>
 
 <span class="sd">        This is intended to be overridden.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">pass</span>
+        <span class="k">pass</span></div>
 
+
+<div class="viewcode-block" id="PyxelGrid.post_draw_grid">
+<a class="viewcode-back" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.post_draw_grid">[docs]</a>
     <span class="k">def</span> <span class="nf">post_draw_grid</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Performs draw commands after drawing the main grid.</span>
 
 <span class="sd">        This is intended to be overridden.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">pass</span>
+        <span class="k">pass</span></div>
 
+
+<div class="viewcode-block" id="PyxelGrid.pre_draw_layer">
+<a class="viewcode-back" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.pre_draw_layer">[docs]</a>
     <span class="k">def</span> <span class="nf">pre_draw_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layeri</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Performs draw commands before drawing the main grid for layer `layeri`.</span>
 
 <span class="sd">        This is intended to be overridden.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">pass</span>
+        <span class="k">pass</span></div>
 
+
+<div class="viewcode-block" id="PyxelGrid.post_draw_layer">
+<a class="viewcode-back" href="../source/pyxelgrid.html#pyxelgrid.PyxelGrid.post_draw_layer">[docs]</a>
     <span class="k">def</span> <span class="nf">post_draw_layer</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">layeri</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;Performs draw commands after drawing the main grid for layer `layeri`.</span>
 
 <span class="sd">        This is intended to be overridden.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">pass</span></div>
+</div>
 
 </pre></div>
 
