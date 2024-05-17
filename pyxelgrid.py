@@ -74,6 +74,7 @@ Each layer is drawn in a similar way as the main grid; `pre_draw_layer()` is cal
 are drawn in row-major order (via `draw_cell_layer()), then finally, `post_draw_layer()` is called.
 """
 
+import os
 from itertools import product
 from typing import Any, Final, Generic, TypeVar
 
@@ -156,7 +157,11 @@ class PyxelGrid(Generic[T]):
         the `init()` method of the class is called. You should do your initialization in this
         method.
         """
+
+        prev_cwd = os.getcwd()
         pyx.init(self.width, self.height, **options)
+        os.chdir(prev_cwd)
+
         self.init()
         pyx.run(self.update, self._draw)
 
